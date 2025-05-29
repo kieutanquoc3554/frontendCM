@@ -1,0 +1,149 @@
+:root {
+  --main-color: #3498db;
+  --accent-color: #f39c12;
+  --text-color: #2c3e50;
+  --background-color: #f4f6f9;
+  --input-bg: #ecf0f1;
+  --border-color: #bdc3c7;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.loginSignup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0e7ff, #f9fafb);
+}
+
+.loginSignup-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loginSignup-container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.loginSignup-container p {
+  font-size: 15px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.loginSignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.loginSignup-fields input {
+  width: 100%;
+  height: 45px;
+  padding-left: 15px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: #2c3e50;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.loginSignup-fields input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.loginSignup-container button {
+  width: 100%;
+  height: 50px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.loginSignup-container button:hover {
+  background: #2980b9;
+}
+
+.loginSignup-login {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+.loginSignup-login span {
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.loginSignup-login span:hover {
+  color: #2c3e50;
+}
+
+.google-login-button {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  background: #db4437;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.google-login-button:hover {
+  background: #c5382a;
+}
+
+.google-login-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.reset {
+  width: 100%;
+  height: 45px;
+  padding-left: 15px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: #2c3e50;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}

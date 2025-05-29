@@ -1,0 +1,38 @@
+.profile-layout {
+  display: flex;
+  height: fit-content;
+}
+
+.sidebar {
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  color: #2e1064;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}

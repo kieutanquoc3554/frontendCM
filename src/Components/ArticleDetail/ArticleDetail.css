@@ -1,0 +1,144 @@
+.article-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.article-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.article-date {
+  color: #888; /* Màu sắc cho ngày tháng */
+  margin-bottom: 20px; /* Khoảng cách dưới ngày tháng */
+  text-align: center; /* Căn giữa ngày tháng */
+}
+
+.article-image {
+  max-width: 100%; /* Chiều rộng hình ảnh tối đa là 100% */
+  height: auto; /* Chiều cao tự động */
+  border-radius: 8px; /* Bo góc cho hình ảnh */
+  margin-bottom: 20px; /* Khoảng cách dưới hình ảnh */
+  display: block; /* Để căn giữa hình ảnh */
+  margin-left: auto; /* Căn giữa hình ảnh */
+  margin-right: auto; /* Căn giữa hình ảnh */
+}
+
+.article-content {
+  line-height: 1.6; /* Khoảng cách giữa các dòng */
+  font-size: 1rem; /* Kích thước văn bản */
+  color: #333; /* Màu sắc cho văn bản */
+  text-align: justify; /* Canh đều các dòng trong nội dung */
+}
+
+.article-content img {
+  max-width: 100%; /* Hình ảnh bên trong nội dung */
+  height: auto; /* Chiều cao tự động */
+  border-radius: 4px; /* Bo góc cho hình ảnh trong nội dung */
+  margin: 10px 0; /* Khoảng cách cho hình ảnh trong nội dung */
+}
+
+.article-content video {
+  max-width: 100%; /* Video bên trong nội dung */
+  height: auto; /* Chiều cao tự động */
+  margin: 10px 0; /* Khoảng cách cho video trong nội dung */
+}
+
+.article-skeleton {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.skeleton {
+  background-color: #e1e1e1;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton.title {
+  height: 24px;
+  width: 60%;
+}
+
+.skeleton.image {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.skeleton.date {
+  height: 16px;
+  width: 40%;
+  margin: 10px 0;
+}
+
+.skeleton.content {
+  height: 100px;
+  width: 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.article-page {
+  display: flex;
+  max-width: 85%;
+  margin: 20px auto;
+}
+
+.article-container {
+  flex: 3;
+  padding: 20px;
+  margin-right: 20px;
+  border: none;
+}
+
+.related-articles {
+  flex: 1;
+  padding: 20px;
+  border: none;
+}
+
+.related-articles h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.related-article {
+  display: flex;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #333;
+  gap: 20px;
+}
+
+.related-article h3 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+.related-article p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.related-article-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}

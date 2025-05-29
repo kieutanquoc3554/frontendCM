@@ -1,0 +1,100 @@
+.search-results {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.search-results h2 {
+  font-size: 24px;
+  color: #0078d4;
+  margin-bottom: 20px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: transform 0.6s;
+  min-height: 250px;
+  justify-content: space-between;
+}
+
+.item img {
+  width: 40%;
+  border-radius: 15px;
+}
+
+.item p {
+  margin: 6px 0px;
+}
+
+.discount-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.discount-ribbon span {
+  position: absolute;
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  top: 20px;
+  right: -40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.item-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.prices {
+  color: #374151;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.old-prices {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}

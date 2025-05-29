@@ -1,0 +1,27 @@
+.relatedProduct-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.relatedProduct {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.relatedProduct-container h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .relatedProduct {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .relatedProduct {
+    grid-template-columns: 1fr;
+  }
+}

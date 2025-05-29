@@ -1,0 +1,43 @@
+.container {
+  padding: 30px 80px;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Bố trí thành lưới */
+  gap: 20px; /* Khoảng cách giữa các thẻ */
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.article-card {
+  border: 1px solid #e1e1e1; /* Đường viền */
+  border-radius: 12px; /* Bo góc */
+  overflow: hidden; /* Ẩn phần vượt ra ngoài */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  transition: transform 0.2s; /* Hiệu ứng chuyển động */
+  padding: 10px; /* Thêm padding vào bên trong thẻ */
+}
+
+.article-card:hover {
+  transform: translateY(-5px); /* Nâng lên khi hover */
+}
+
+.article-image {
+  width: 100%; /* Chiều rộng 100% */
+  height: 200px; /* Chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Cắt ảnh để giữ tỷ lệ */
+  border-radius: 8px; /* Bo góc cho hình ảnh */
+}
+
+.article-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.article-date {
+  color: #888; /* Màu sắc cho ngày tháng */
+  margin: 0; /* Không có khoảng cách bên ngoài */
+}

@@ -1,0 +1,54 @@
+.confirm-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.confirm-info {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+.confirm-left {
+  text-align: left;
+  padding: 0 30px 30px 30px;
+  width: 40%;
+}
+
+.confirm-right {
+  padding: 0 30px 30px 30px;
+  text-align: right;
+}
+
+.product-item {
+  padding: 0 10px 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 5px;
+}
+
+.involce {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(18, 215, 110);
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-spinner p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}

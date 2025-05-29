@@ -1,0 +1,36 @@
+.product-category {
+  display: flex;
+}
+
+/* Default light mode */
+body {
+  background-color: white;
+  color: black;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Ví dụ cho các thành phần cụ thể */
+.navbar {
+  background-color: #f5f5f5;
+}
+
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.dark-mode .footer {
+  background-color: #333;
+}

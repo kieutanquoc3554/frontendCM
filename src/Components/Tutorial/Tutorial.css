@@ -1,0 +1,14 @@
+.tutorial-container {
+  margin: 50px 120px 0px 120px;
+}
+
+.image {
+  width: 75%;
+  margin: 10px auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
