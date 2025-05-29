@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Checkout.css";
 import axios from "axios";
 import { ShopContext } from "../../Context/ShopContext";
-import { useNavigate } from "react-router-dom";
 import { PayPalButton } from "react-paypal-button-v2";
 import { Icon } from "@iconify/react";
 import { toast } from "react-toastify";
 import Success from "../Success/Success";
 import Fail from "../Fail/Fail";
 import { useLocation } from "react-router-dom";
+import usePromotions from "../../Hooks/API/usePromotions";
 
 const Checkout = () => {
   const [userInfo, setUserInfo] = useState(null);
@@ -24,7 +24,6 @@ const Checkout = () => {
     applyDiscount,
     setCode,
   } = useContext(ShopContext);
-  const [promoCode, setPromoCode] = useState("");
   const [isAppliedPromotion, setIsAppliedPromotion] = useState(false);
   const [payment, setPayment] = useState([]);
   const [provinces, setProvinces] = useState([]);
@@ -40,7 +39,6 @@ const Checkout = () => {
   const [orderSuccess, setOrderSuccess] = useState(false);
   const [order, setOrder] = useState({});
   const [isAddressModalOpen, setIsAddressModalOpen] = useState(false);
-  const [availablePromotions, setAvailablePromotions] = useState([]);
   const [selectedPromotion, setSelectedPromotion] = useState(null);
   const [selectedAddress, setSelectedAddress] = useState({
     detailAddress: "",
@@ -52,6 +50,10 @@ const Checkout = () => {
   const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false);
   const [isPaymentFailed, setIsPaymentFailed] = useState(false);
   const location = useLocation();
+  const { availablePromotions, getApplicablePromotions } = usePromotions({
+    getTotalCartAmount,
+    selectedPayment,
+  });
 
   useEffect(() => {
     const handleResetPromotion = async () => {
@@ -121,29 +123,6 @@ const Checkout = () => {
   };
 
   useEffect(() => {
-    const getApplicablePromotions = async () => {
-      try {
-        const response = await axios.post(
-          "https://backendlvtn.onrender.com/promotions/applicable",
-          {
-            purchaseAmount: getTotalCartAmount(),
-            paymentMethod: selectedPayment,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("tk")}`,
-            },
-          }
-        );
-
-        setAvailablePromotions(response.data);
-      } catch (error) {
-        toast.error(
-          error.response?.data.message ||
-            "Có lỗi xảy ra khi lấy danh sách khuyến mãi."
-        );
-      }
-    };
     getApplicablePromotions();
   }, [getTotalCartAmount, selectedPayment]);
 
